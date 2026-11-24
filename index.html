@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Document Question Answering System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <header>
+            <h1>Document Q&A System</h1>
+            <p>Upload a document and ask questions about its content.</p>
+        </header>
+
+        <main class="card">
+
+            <form method="POST" enctype="multipart/form-data">
+
+                <label for="document">Upload Your Document</label>
+                <input
+                    type="file"
+                    id="document"
+                    name="document"
+                    accept=".pdf,.docx,.txt"
+                    required
+                >
+
+                <label for="question">Enter Your Question</label>
+                <textarea
+                    id="question"
+                    name="question"
+                    placeholder="Example: What technologies were used?"
+                    required
+                >{{ question or '' }}</textarea>
+
+                <button type="submit">Get Answer</button>
+
+            </form>
+
+            {% if error %}
+                <div class="error">
+                    {{ error }}
+                </div>
+            {% endif %}
+
+            {% if answer %}
+                <div class="answer">
+                    <h2>Generated Answer</h2>
+                    {% if filename %}
+                        <p><strong>Document:</strong> {{ filename }}</p>
+                    {% endif %}
+                    <p class="answer-text">{{ answer }}</p>
+                </div>
+            {% endif %}
+
+        </main>
+
+        <footer>
+            <p>AI-Based Document Question Answering System</p>
+        </footer>
+
+    </div>
+
+</body>
+</html>
