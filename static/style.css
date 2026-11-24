@@ -1,0 +1,129 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f0f4f8;
+    color: #263445;
+    min-height: 100vh;
+}
+
+.container {
+    width: 90%;
+    max-width: 750px;
+    margin: 50px auto;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    color: #2457a6;
+    margin-bottom: 12px;
+}
+
+header p {
+    color: #667085;
+    line-height: 1.5;
+}
+
+.card {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+label {
+    font-weight: bold;
+    margin-top: 8px;
+}
+
+input[type="file"],
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccd5e0;
+    border-radius: 7px;
+    font-size: 15px;
+}
+
+textarea {
+    min-height: 110px;
+    resize: vertical;
+}
+
+button {
+    background: #2457a6;
+    color: white;
+    border: none;
+    padding: 13px;
+    border-radius: 7px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 8px;
+}
+
+button:hover {
+    background: #19447f;
+}
+
+.answer {
+    margin-top: 25px;
+    padding: 20px;
+    background: #edf5ff;
+    border-left: 4px solid #2457a6;
+    border-radius: 7px;
+}
+
+.answer h2 {
+    color: #2457a6;
+    margin-bottom: 12px;
+}
+
+.answer-text {
+    white-space: pre-line;
+    line-height: 1.7;
+    margin-top: 12px;
+}
+
+.error {
+    margin-top: 20px;
+    padding: 12px;
+    color: #a12626;
+    background: #fff0f0;
+    border-radius: 7px;
+}
+
+footer {
+    text-align: center;
+    margin-top: 25px;
+    color: #77808c;
+    font-size: 13px;
+}
+
+@media (max-width: 600px) {
+    .container {
+        margin: 25px auto;
+    }
+
+    .card {
+        padding: 20px;
+    }
+
+    header h1 {
+        font-size: 24px;
+    }
+}
